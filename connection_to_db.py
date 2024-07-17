@@ -31,5 +31,5 @@ def select_data_from_db(config: dict, sql_query: str = "select * from basket.tea
 
 if __name__ == '__main__':
     config = read_config()
-
     teams = select_data_from_db(config)
+    print(teams)
