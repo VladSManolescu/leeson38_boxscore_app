@@ -150,6 +150,7 @@ class Ui_MainWindow(object):
         self.checkbox_away_list = [self.checkBox_away_1, self.checkBox_away_2, self.checkBox_away_3, self.checkBox_away_4,
                                    self.checkBox_away_12, self.checkBox_away_5, self.checkBox_away_6, self.checkBox_away_7,
                                    self.checkBox_away_8, self.checkBox_away_9, self.checkBox_away_10, self.checkBox_away_11]
+        self.hide_elements(self.checkbox_home_list + self.checkbox_away_list)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(parent=MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 879, 22))
@@ -161,6 +162,11 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+
+    def open_new_window(self, MainWindow):
+        MainWindow.hide()
+
 
     @staticmethod
     def hide_elements(list_of_elements: list):
